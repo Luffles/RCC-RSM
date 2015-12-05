@@ -81,7 +81,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-// Creating the widget 
+// Creating the news widget 
 class rcc_news_widget extends WP_Widget {
 
 function __construct() {
@@ -141,10 +141,75 @@ return $instance;
 } // Class rcc_news_widget ends here
 
 // Register and load the widget
-function wpb_load_widget() {
+function rcc_news_load_widget() {
   register_widget( 'rcc_news_widget' );
 }
-add_action( 'widgets_init', 'wpb_load_widget' );
+add_action( 'widgets_init', 'rcc_news_load_widget' );
+
+
+
+// Creating the shop widget 
+class rcc_shop_widget extends WP_Widget {
+
+function __construct() {
+parent::__construct(
+// Base ID of your widget
+'rcc_shop_widget', 
+
+// Widget name will appear in UI
+__('RCC Shop Widget', 'rcc_shop_widget_domain'), 
+
+// Widget description
+array( 'description' => __( 'Shop widget for Rachel Carson Council', 'rcc_shop_widget_domain' ), ) 
+);
+}
+
+// Creating widget front-end
+// This is where the action happens
+public function widget( $args, $instance ) {
+$title = apply_filters( 'widget_title', $instance['title'] );
+// before and after widget arguments are defined by themes
+echo $args['before_widget'];
+echo $args['before_title'] . $args['after_title'];
+
+// This is where you run the code and display the output
+
+echo '<a class="greenbutton" href="';
+echo home_url( "/shop" );
+echo '">Shop RCC</a>';
+echo $args['after_widget'];
+}
+    
+// Widget Backend 
+public function form( $instance ) {
+if ( isset( $instance[ 'title' ] ) ) {
+$title = $instance[ 'title' ];
+}
+else {
+$title = __( 'New title', 'rcc_shop_widget_domain' );
+}
+// Widget admin form
+?>
+<p>
+<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+</p>
+<?php 
+}
+  
+// Updating widget replacing old instances with new
+public function update( $new_instance, $old_instance ) {
+$instance = array();
+$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+return $instance;
+}
+} // Class rcc_shop_widget ends here
+
+// Register and load the widget
+function rcc_shop_load_widget() {
+  register_widget( 'rcc_shop_widget' );
+}
+add_action( 'widgets_init', 'rcc_shop_load_widget' );
 
 /**
  * Add extra custom fields to slideshow images

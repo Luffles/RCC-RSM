@@ -37,12 +37,12 @@
 					<?php
 					$defaults = array(
 						'theme_location'  => '',
-						'menu'            => '',
+						'menu'            => '2',
 						'container'       => 'div',
 						'container_class' => '',
 						'container_id'    => '',
 						'menu_class'      => 'menu',
-						'menu_id'         => '1',
+						'menu_id'         => '2',
 						'echo'            => true,
 						'fallback_cb'     => 'wp_page_menu',
 						'before'          => '',

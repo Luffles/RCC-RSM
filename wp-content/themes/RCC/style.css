@@ -1,0 +1,323 @@
+/*
+Theme Name: BlankSlate
+Theme URI: http://wordpress.org/themes/blankslate
+Author: relaystationmedia
+Author URI: http://relaystationmedia.com/
+Description: <strong>UPDATE</strong> - 4.0+ is here, completely overhauled, yet again. As always, <a href="http://relaystationmedia.com/concept/#upgrading">use caution when upgrading</a> (relaystationmedia.com/concept/#upgrading) and <a href="http://relaystationmedia.com/concept/">learn the relaystationmedia concept</a> (relaystationmedia.com/concept). &nbsp; &rarr; <em><strong>CAUTION</strong>: If you're child theming or have clients that are child theming on top of BlankSlate (not the recommended use), please do not blindly upgrade to newer versions.</em> &nbsp; &rarr; <strong>DESCRIPTION</strong>: BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme available anywhere for designers/developers to use as a base/foundation to build websites for clients or to build completely custom themes from scratch to release faster. Clean, semi-minified, unformatted and valid code, SEO-friendly, no programmer comments, standardized and as white label as possible and most importantly, CSS reset for cross-browser-compatability and no intrusive visual CSS styles added whatsoever. A perfect skeleton theme that blows any others like it (the subsequent underscores.me for example) completely out of the water, as they're simply too overcomplicated for what people really want in this kind of theme. Now comes with jQuery enqueued and ready to go. &nbsp; &rarr; <strong>SUPPORT</strong>: Please use the <a href="http://relaystationmedia.com/forum/">official support forum</a> (relaystationmedia.com/forum). Comments and suggestions for improving BlankSlate, please see "<a href="http://relaystationmedia.com/relaystationmedia-sucks/">relaystationmedia Sucks!</a>" (relaystationmedia.com/relaystationmedia-sucks). Just getting started? <a href="http://relaystationmedia.com/want-to-learn-css/">Want to learn CSS?</a> (relaystationmedia.com/want-to-learn-css) &nbsp; &rarr; <strong>WHAT'S NEW?</strong>: We stripped down as much custom, extraneous, superfluous junk code as we could and greatly improved the HTML5 structure. <a href="http://make.wordpress.org/themes/author/chipbennett/">Chip Bennett</a> (make.wordpress.org/themes/author/chipbennett), a highly experienced programmer and official WordPress administrator, worked closely with us to audit the theme code for quality. <a href="http://themes.trac.wordpress.org/changeset?old_path=/blankslate/3.3&new_path=/blankslate/4.0">See</a> (themes.trac.wordpress.org/changeset?old_path=/blankslate/3.3&new_path=/blankslate/4.0) just how much we've revamped things. Last, but not least, BlankSlate has now been <a href="https://github.com/relaystationmedia/blankslate">opened up on GitHub</a> (github.com/relaystationmedia/blankslate) if anyone would like to make suggested code additions/improvements. Thank you for using BlankSlate.
+Version: 4.0.2
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+BlankSlate WordPress Theme © 2011-2014 relaystationmedia
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+
+
+/* global */
+
+html, body {
+	background-color: #ededed
+}
+
+.container {
+	margin-top: 25px;
+}
+
+li {
+	display: inline-block;
+}
+
+.greenbutton {
+	color: #FFF;
+	background-color: #005637;
+	padding: .15em;
+	padding-left: .75em;
+	padding-right: .75em;
+}
+
+.bluebutton a {
+	color: #FFF;
+	background-color: #065193;
+	padding: .15em;
+	padding-left: .75em;
+	padding-right: .75em;
+}
+
+section {
+	clear: both;
+}
+
+/* header */
+
+header .container .row {
+	position: relative;
+}
+
+header .container .col-md-8 {
+	position: absolute;
+	bottom: 6px;
+	left: 16.66666667%;
+}
+
+header .container .col-md-2:last-of-type {
+	position: absolute;
+	bottom: 0;
+	left: 83.33333334%;
+}
+
+.logo img {
+	max-width: 100%;
+}
+
+.mainmenu {
+	text-transform: uppercase;
+}
+
+header li {
+	margin-right: 3%;
+}
+
+header li:last-of-type {
+	margin-right: 0;
+}
+
+header li a {
+	color: #005637;
+	font-size: 1em;
+	font-family: BerninoSans, sans-serif;
+	font-style: normal;
+	font-stretch: condensed !important;
+	font-weight: 700;
+}
+header li a:hover {
+	text-decoration: none;
+}
+
+header li:nth-last-child(2) a {
+	color: #FFF;
+	font-size: 1.25em;
+	background-color: #005637;
+	padding: .35em 1em;
+}
+
+header li:last-child a {
+	font-size: 1.25em;
+	color: #FFF;
+	background-color: #f26222;
+	padding: .35em 1.5em;
+}
+
+
+.topsocial img {
+	display: inline-block;
+	width: 21%;
+	margin-right: 1%;
+}
+
+.topsocial a:last-of-type img {
+	margin-right: 0;
+}
+
+.topsocial a:hover {
+	text-decoration: none;
+}
+
+/* Slider Overrides */
+
+.soliloquy-container .soliloquy-next, .soliloquy-prev {
+	display: none !important;
+}
+
+.soliloquy-container .soliloquy-caption {
+	position: absolute !important;
+	bottom: 35% !important;
+	background: #065193 !important;
+	left: inherit !important;
+	width: 50% !important;
+	right: 0 !important;
+}
+
+.captionTop {
+	font-size: 1.3em !important;
+	font-family: BerninoSans, sans-serif !important;
+	font-weight: bold;
+	font-stretch: condensed !important;
+}
+
+/* index */
+
+.maincontainer {
+	margin-top: 0;
+		background-color: #FFF;
+	background-clip: content-box;
+}
+
+img.attachment-post-thumbnail.wp-post-image {
+	max-width: 100%;
+	height: 100%;
+}
+
+/* index posts */
+
+.entry-summary {
+	margin-top: 50px;
+}
+
+.entry-summary > * {
+	height: 242px;
+}
+
+.entry-title {
+	position: relative;
+	top: 20%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.entry-title a {
+	font-family: FiraSans, sans-serif;
+	color: #535352;
+	font-size: 1.5em;
+}
+
+.readmore.bluebutton {
+	    max-width: 40%;
+    text-align: center;
+	position: relative;
+	top: 40%;
+    margin-left: -3px;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+
+}
+
+.readmore.bluebutton a {
+	padding: .75em 1.25em .75em 1.25em;
+	font-family: BerninoSans, sans-serif;
+	font-style: normal;
+	font-stretch: condensed;
+	font-weight: 600;
+}
+
+.postsummary p {
+	position: relative;
+	top: 30%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-family: FiraSans, sans-serif;
+	color: #535352;
+	font-size: .8em;
+	    line-height: 1.4em;
+}
+
+
+/* sidebar */
+
+/* sidebar posts */
+
+#sidebar .entry-summary {
+	
+}
+
+
+@media screen and (max-width: 1199px) {
+
+/*header*/
+	header li {
+		margin-right: 1%;
+	}
+
+	header li a {
+		font-size: 1em;
+	}
+
+	header li:nth-last-child(2) a, header li:last-child a {
+		font-size: 1em;
+	}
+
+		/* slider */
+	.captionTop {
+		font-size: 1.1em !important;
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+	/* header */
+
+	header .container .col-md-8 {
+		position: inherit;
+		bottom: inherit;
+		left: inherit;
+	}
+
+	header .container .col-md-2:last-of-type {
+		position: inherit;
+		bottom: inherit;
+		left: inherit;
+	}
+
+	header li a {
+		font-size: 1.1em;
+	}
+	.logo {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+	header li {
+		display: block;
+		text-align: center;
+		margin-bottom: 5%;
+	}
+
+	header li a {
+		font-size: 3em;
+	}
+
+	.topsocial {
+		text-align: center;
+	}
+
+	.topsocial img {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		display: inline-block;
+		width: 12%;
+	}
+
+
+
+	/* posts */
+	.entry-summary > * {
+    height: 300px;
+}
+
+	.entry-title {
+		text-align: center;
+		top: 10%;
+	}
+
+	.postsummary p {
+		text-align: center;
+    top: 15%;
+	}
+
+	.readmore.bluebutton {
+		    margin-left: auto;
+    margin-right: auto;
+        top: 30%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+}

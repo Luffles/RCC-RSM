@@ -1,0 +1,7 @@
+[20-Jul-2015 13:16:46 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/shortcode.php on line 110
+[20-Jul-2015 19:08:05 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/posttype.php on line 47
+[21-Jul-2015 13:12:37 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/common.php on line 47
+[24-Sep-2015 23:54:11 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/common.php on line 47
+[25-Sep-2015 18:20:22 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/shortcode.php on line 110
+[29-Sep-2015 02:48:54 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/posttype.php on line 47
+[30-Sep-2015 00:28:53 America/Chicago] PHP Fatal error:  Class 'Soliloquy_Lite' not found in /home/hartre/public_html/wp-content/plugins/soliloquy-lite/includes/global/posttype.php on line 47

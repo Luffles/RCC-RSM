@@ -6,6 +6,5 @@
 		</a>
 		<?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?> 
 		        <?php get_template_part( 'entry-meta' ); ?>
-		
 		<?php the_excerpt(); ?>
 </section>

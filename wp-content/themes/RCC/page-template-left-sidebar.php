@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Left Sidebar
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
+ */
+get_header(); ?>
 
 
 <div class="maincontainer container">

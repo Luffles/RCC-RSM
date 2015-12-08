@@ -1,11 +1,13 @@
 <?php get_header(); ?>
+<div class="maincontainer container">
+		<div class="col-md-12 maincontent">
 <section id="content" role="main">
 <?php if ( have_posts() ) : ?>
 <header class="header">
 <h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'rachelcarsoncouncil' ), get_search_query() ); ?></h1>
 </header>
 <?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
+<?php get_template_part( 'entry-search' ); ?>
 <?php endwhile; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
 <?php else : ?>
@@ -20,5 +22,6 @@
 </article>
 <?php endif; ?>
 </section>
-<?php get_sidebar(); ?>
+</div>
+</div>
 <?php get_footer(); ?>

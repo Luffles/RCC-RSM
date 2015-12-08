@@ -231,21 +231,43 @@ img.attachment-post-thumbnail.wp-post-image {
 	line-height: 1.4em;
 }
 
-/*inner pages*/
+/*inner pages & Search */
 
-.page p {
-	color: #535352
+.page h1, .single h1 {
+	font-family: FiraSans, sans-serif;
+	font-size: 2em;
+	color: #535352;
+	margin-bottom: 1em;
 }
 
-.page header .container {
+.page h2 {
+	font-family: FiraSans, sans-serif;
+	font-size: 1.5em;
+	color: #535352;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.page h2 a {
+	font-family: FiraSans, sans-serif;
+	color: #535352;
+}
+
+.page p, .single p {
+	color: #535352;
+	line-height: 1.3em;
+}
+
+.page header .container, .search header .container, .single header .container {
 	margin-bottom: 25px;
 }
 
-.page .maincontent {
-	    margin-top: 50px;
+.page .maincontent, .search .maincontent, .single .maincontent {
+	margin-top: 50px;
+	padding-right: 50px;
 }
 
-.page .maincontent .entry-title {
+.page .maincontent .entry-title, .search .maincontent .entry-title .single .maincontent .entrytitle {
 	position: inherit;
 	top: 0;
 	-webkit-transform: inherit;
@@ -253,13 +275,34 @@ img.attachment-post-thumbnail.wp-post-image {
 	transform: inherit;
 }
 
-
-.page #sidebar {
-	    padding: 0 15%;
+.page #sidebar, .single #sidebar {
+	padding: 0 15%;
 }
 
-.page .widget_rcc_shop_widget .greenbutton {
-    padding: .5em 1.5em;
+.page .widget_rcc_shop_widget .greenbutton, .single .widget_rcc_shop_widget .greenbutton {
+	padding: .3em .9em;
+}
+
+.innerexcerpt {
+	padding-right: 25px;
+	margin-bottom: 50px;
+	min-height: 550px;
+	border-bottom: 1px solid #D0CDC2;
+}
+
+.maincontent .col-md-4:first-of-type .innerexcerpt {
+	padding-left: 25px;
+	display: none;
+}
+
+.maincontent .col-md-4:last-of-type .innerexcerpt, .maincontent .col-md-4:nth-last-of-type(2) .innerexcerpt, .maincontent .col-md-4:nth-last-of-type(3) .innerexcerpt {
+	border-bottom: none;
+}
+
+
+.search .readmore.bluebutton {
+	text-align: left;
+	margin-left: 0;
 }
 
 /* sidebar */
@@ -273,6 +316,17 @@ img.attachment-post-thumbnail.wp-post-image {
 	padding-bottom: 25px;
 	width: 80%;
 	margin-right: 20%;
+}
+
+.page .mainsidebar .xoxo > *, .single .mainsidebar .xoxo > * {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: inherit;
+	margin-right: 0;
+}
+
+.page .mainsidebar img, .single .mainsidebar img {
+	padding-bottom: 15px;
 }
 
 .widget_rcc_news_widget h3 {
@@ -293,6 +347,10 @@ img.attachment-post-thumbnail.wp-post-image {
 	font-size: .95em;
 }
 
+.widget_rcc_news_widget {
+	border-top: 1px solid #D0CDC2;
+}
+
 .widget_rcc_news_widget .entry-summary {
 	border-bottom: 1px solid #D0CDC2;
 	padding-top: 25px;
@@ -305,7 +363,7 @@ img.attachment-post-thumbnail.wp-post-image {
 }
 
 .widget_rcc_shop_widget .greenbutton {
-	padding: .5em 3em;
+	padding: .5em 2.3em;
 }
 
 .widget_rcc_shop_widget a.greenbutton {
@@ -331,6 +389,10 @@ h3.widget-title, .mainsidebar h2 {
 
 .mainsidebar h2 a {
 	color: #535352;
+}
+
+.page .mainsidebar .widget_text , .single .mainsidebar .widget_text {
+	display: block;
 }
 
 
@@ -460,6 +522,11 @@ a.footeremail {
 		width: 12%;
 	}
 
+	/* inner pages */
+
+	.page .maincontent {
+		padding-left: 50px;
+	}
 
 
 	/* posts */
@@ -484,6 +551,10 @@ a.footeremail {
 	}
 
 	/* sidebar */
+
+	.widget-area {
+		margin-top: 25px;
+	}
 
 	.mainsidebar .xoxo > * {
 		width: 100%;

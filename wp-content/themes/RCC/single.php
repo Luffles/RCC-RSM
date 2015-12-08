@@ -8,7 +8,8 @@
 		</div>
 		<div class="col-md-8 maincontent">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'entry-blog' ); ?>
+				<h1> <?php the_title(); ?> </h1>
+				<?php the_content(); ?>
 			<?php endwhile; endif; ?>
 			<?php get_template_part( 'nav', 'below' ); ?>
 		</div>

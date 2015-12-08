@@ -108,11 +108,12 @@ if ( ! empty( $title ) )
 echo $args['before_title'] . $title . $args['after_title'];
 
 // This is where you run the code and display the output
-
+query_posts('showposts=2');
       if ( have_posts() ) : while ( have_posts() ) : the_post();
         get_template_part( 'entry-summary-sidebar' );
       endwhile; 
       endif; 
+     wp_reset_query();
 echo $args['after_widget'];
 }
     
@@ -271,4 +272,3 @@ function admin_add_wysiwyg_custom_field_textarea()
 add_action( 'admin_print_footer_scripts', 'admin_add_wysiwyg_custom_field_textarea', 99 );
 
 ?>
-

@@ -7,10 +7,9 @@
 			<?php get_sidebar('left'); ?>
 		</div>
 		<div class="col-md-8 maincontent">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'entry-blog' ); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
 			<?php endwhile; endif; ?>
-			<?php get_template_part( 'nav', 'below' ); ?>
 		</div>
 
 	</div>
